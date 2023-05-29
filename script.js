@@ -9,7 +9,7 @@ let audios = [
             ];
 
 
-const buttons = document.getElementsByTagName("button");
+const buttons = document.querySelectorAll(".btn");
 let activeAudio = null;
 
 function  expectPlayingAudio() {
@@ -29,7 +29,7 @@ for (let i = 0; i < buttons.length; i++) {
 		if(audios.includes(innerText)){
 			//play that music
 			let audioElement = document.createElement("audio");
-			audioElement.src = `.sound/+${innerText}+.mp3`;
+			audioElement.src = `.sound/${innerText}.mp3`;
 			audioElement.controls = true;
 			activeAudio = audioElement;
 			 expectPlayingAudio();
