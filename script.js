@@ -12,7 +12,7 @@ let audios = [
 const buttons = document.getElementsByTagName("button");
 let activeAudio = null;
 
-function playAudio() {
+function  expectPlayingAudio() {
 	stopAudio();
 	activeAudio.play();
 }
@@ -32,7 +32,7 @@ for (let i = 0; i < buttons.length; i++) {
 			audioElement.src = `.sound/+${innerText}+.mp3`;
 			audioElement.controls = true;
 			activeAudio = audioElement;
-			playAudio();
+			 expectPlayingAudio();
 		}
 		else{
 			stopAudio();
